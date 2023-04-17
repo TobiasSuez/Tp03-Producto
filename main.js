@@ -5,10 +5,11 @@ fetch('https://dummyjson.com/products')
         valores = document.getElementById("producto");
         json.products.forEach(elemento => {
             console.log(elemento.title)
-            elemento=document.createElement("li")
-            elemento.innerHTML=`Nombre:${json.products.title}`
-            valores.appendChild(elemento)
+            li=document.createElement("li")
+            li.innerHTML=`Nombre :${elemento.title}`
+            valores.appendChild(li)
         });
   })    
     .catch(err => console.error("error", err))
     console.log("Fin consulta - fetch")
+

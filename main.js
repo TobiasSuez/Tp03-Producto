@@ -43,10 +43,9 @@ function Buscar() {
   var lol=document.getElementById("producto").getElementsByTagName("miBoton")
   for (let element of el) {
     element.classList.add("d-none");
+    lol.classList.add("d-none")
   }
-  for(let elementos of lol){
-    elementos.classList.add("d-none")
-  }
+
   Ingresos = document.getElementById("Ingreso").value
   fetch('https://dummyjson.com/products/search?q=' + Ingresos)
     .then(res => res.json())
@@ -69,6 +68,8 @@ select.addEventListener('change', function handleChange(event) {
   var el = document.getElementById("producto").getElementsByTagName("li");
   for (let element of el) {
     element.classList.add("d-none");
+    lol.classList.add("d-none")
+
   }
 
   fetch('https://dummyjson.com/products/category/' + categoria)

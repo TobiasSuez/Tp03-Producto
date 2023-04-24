@@ -26,10 +26,29 @@
       </nav>
     
 <h2>Busca la producto  que quieras!!!</h2>
-<button onclick="Buscar()" class="btn btn-outline-primary">Agrega una cosa</button>
-<input class="form-control" id="Ingreso" aria-describedby="emailHelp"> 
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-4">
+
+    <input  type="search" id="Ingreso" aria-describedby="emailHelp"> 
+    <but  ton onclick="Buscar()" class="btn btn-outline-primary">Buscar</button>
+  </div>
+  <div class="col-4">
+    <select id="Select">
+      <option value="">Elegi una categoria </option>
+      <option value="smartphones">smartphones </option>
+      <option value="laptops">laptops </option>
+      <option value="fragrances">fragrances</option>
+      <option value="skincare">skincare </option>
+      <option value="groceries">groceries </option>
+      <option value="home-decoration">home-decoration </option>
+    </select>
+  </div>
+
+</div>
 
 <ul id="producto">
+
 </ul>
 
 

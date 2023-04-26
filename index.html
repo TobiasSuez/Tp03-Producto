@@ -54,9 +54,20 @@
 
 <div id="myModal" class="modal">
 
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p id="contenido"></p>
+  <div class="modal fade" id="ModalInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="titulo"></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <img class="modal-img-top" id="imagen">
+        <div class="modal-body">
+          <p class="descripcion" id="descripcion"></p>
+          <h6 class="precio" id="precio"></h6>
+        </div>
+      </div>
+    </div>
   </div>
 
 

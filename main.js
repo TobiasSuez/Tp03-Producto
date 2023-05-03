@@ -8,7 +8,7 @@ fetch('https://dummyjson.com/products')
       li.innerHTML = `
       <div>
       <h5>Nombre: ${elemento.title}</h5>
-      <button onclick="cargarValores('${elemento.title}','${elemento.thumbnail}','${elemento.description}','${elemento.price}')">Mas Info</button>
+      <button type="button" class="btn colorbotton text" data-bs-toggle="modal" data-bs-target="#ModalInfo" onclick="cargarValores('${elemento.title}','${elemento.thumbnail}','${elemento.description}','${elemento.price}')">Ver producto</button>
       </div>`
       valores.appendChild(li)
 
@@ -38,7 +38,11 @@ function Buscar() {
       valores = document.getElementById("producto");
       json.products.forEach(elemento => {
         li = document.createElement("li")
-        li.innerHTML = `Nombre: ${elemento.title}`
+        li.innerHTML = `
+        <div>
+        <h5>Nombre: ${elemento.title}</h5>
+        <button type="button" class="btn colorbotton text" data-toggle="modal" data-target="#ModalInfo" onclick="cargarValores('${elemento.title}','${elemento.thumbnail}','${elemento.description}','${elemento.price}')">Ver producto</button>
+        </div>`
         valores.appendChild(li)
       });
     })
@@ -60,7 +64,11 @@ select.addEventListener('change', function handleChange(event) {
       valores = document.getElementById("producto");
       json.products.forEach(elemento => {
         li = document.createElement("li")
-        li.innerHTML = `Nombre: ${elemento.title}`
+        li.innerHTML = `
+        <div>
+        <h5>Nombre: ${elemento.title}</h5>
+        <button onclick="cargarValores('${elemento.title}','${elemento.thumbnail}','${elemento.description}','${elemento.price}')">Mas Info</button>
+        </div>`
         valores.appendChild(li)
       });
     })
